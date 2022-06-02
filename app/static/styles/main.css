@@ -101,9 +101,7 @@ li a:hover {
 
 .intro {
   width: 100%;
-  /* height: 100vh; */
   color: #10a775;
-  color: "crimson";
   display: flex;
   align-items: center;
   justify-content: center;
