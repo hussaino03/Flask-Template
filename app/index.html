@@ -19,6 +19,17 @@
     />
 
     <link lang="sass" rel="stylesheet" href="./static/styles/main.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"
+    />
+    <style type="text/css">
+      .fa_custom {
+        color: #0099cc;
+      }
+    </style>
+
     <link rel="icon" href="./static/img/favicon.ico" type="image/x-icon" />
 
     <link
@@ -29,11 +40,44 @@
   </head>
 
   <body>
+    <!-- transparent black div to overlay the background -->
     <div class="overlay"></div>
+    <!-- transparent black div to overlay the background -->
 
+    <!-- menu_bar -->
     <header class="nav-bar">
       <div>
+        <div class="contact-div">
+          <div class="social_icon">
+            <a href="https://github.com/The-Pr0grammer">
+              <i class="fa fa-github fa_custom fa-4x"></i>
+            </a>
+          </div>
+          <div class="social_icon">
+            <a href="https://www.linkedin.com/in/anthony-holder-93b81a19a/">
+              <i class="fa fa-linkedin fa_custom fa-4x"></i>
+            </a>
+          </div>
+          <div class="social_icon">
+            <a href="https://twitter.com/The_Pr0grammer_">
+              <i class="fa fa-twitter fa_custom fa-4x"></i>
+            </a>
+          </div>
+          <div>
+            <span class="email_link">Email:</span>
+            <a class="email_link" href="mailto:anthonyh202x@gmail.com">
+              <br /><em>example_email@mail.com</em></a
+            >
+          </div>
+        </div>
+        <div class="img-div">
+          <image class="img1" src="./static/img/profile_pic.jpeg"></image>
+        </div>
+
         <ul class="nav-content">
+          <li class="nav-item">
+            <a class="nav-link" href="default.asp">Home</a>
+          </li>
           <li class="nav-item">
             <a class="nav-link" href="default.asp">About Me</a>
           </li>
@@ -49,17 +93,14 @@
           <li class="nav-item">
             <a class="nav-link" href="default.asp">My Travels</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="default.asp">Contact Me</a>
-          </li>
         </ul>
       </div>
     </header>
+    <!-- menu_bar -->
 
-    <div class="intro-div">
-      <div class="img-div">
-        <image class="img1" src="./static/img/profile_pic.jpeg"></image>
-      </div>
+    <!-- animated intro  -->
+    <!-- <div class="intro-div">
+      <div class="intro-spacer"></div>
       <p class="intro"></p>
     </div>
 
@@ -70,12 +111,30 @@
         strings: [
           "Hello, I'm {insert name}",
           "I'm a Full Stack Web Developer",
-          "Welcome to my portfolio!",
+          `Welcome to my portfolio!`,
         ],
-        typeSpeed: 65,
+        typeSpeed: 60,
         backSpeed: 50,
-        loop: false,
+        loop: true,
       });
-    </script>
+    </script> -->
+    <!-- animated intro  -->
+
+    <div class="focus">
+      <div class="focus--mask">
+        <div class="focus--mask-inner">About Me</div>
+      </div>
+      <p class="am">
+        I’m the type of person that will burst out laughing in dead silence over
+        something that happened yesterday. My ethics are so clear and
+        transparent that you can’t even see them. Sometimes I wish my mouth had
+        a Pause button… I’m so cool I wasn’t actually born, I was defrosted. I’m
+        so cool that even ice cubes are jealous. I’m so hot that I contribute to
+        global warming. I am so clever that sometimes I don’t understand a
+        single word of what I am saying. I don’t believe in miracles. I rely on
+        them. I’m painting a blue square in my backyard so Google Earth thinks I
+        have a pool.
+      </p>
+    </div>
   </body>
 </html>
