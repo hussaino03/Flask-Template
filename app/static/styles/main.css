@@ -23,21 +23,29 @@ body {
 }
 
 .nav-bar {
+  display: flex;
   height: 100vh;
-  max-width: 300px;
-  min-width: 300px;
+  width: 20vw;
+  max-width: 20vw;
+  min-width: 20vw;
   margin: 0;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding-top: 35px;
+
+  border-width: 1px;
+  border-style: solid;
+  border-color: #c7cfdfd7;
+  /* padding-top: 1%; */
 
   background-color: #0000007b;
+  /* background-color: #8503037b; */
   font-weight: 700 !important;
 }
 
 .nav-content {
   display: inline;
+  min-width: 50%;
   text-align: center;
   padding-left: 0px;
 
@@ -45,6 +53,7 @@ body {
 }
 
 .nav-content .nav-item {
+  min-width: 30%;
   display: inline-block;
   padding: 35px 20px;
 
@@ -57,7 +66,7 @@ body {
   transition: 0.5s;
 
   font-family: "Courier New", Courier, monospace;
-  font-size: 2em;
+  font-size: 2vw;
   color: #10a775;
 }
 
@@ -68,21 +77,34 @@ li a:hover {
   background-color: #555;
 }
 
+.middle_panel {
+  /* display: flex; */
+  flex-direction: column;
+  height: 100vh;
+  width: 25vw;
+  max-width: 25vw;
+  min-width: 25vw;
+  margin: 0;
+  /* align-items: center;
+  justify-content: center; */
+  text-align: center;
+  font-weight: 700 !important;
+}
+
 .img-div {
-  position: absolute;
-  height: 90%;
-  width: 65%;
-  min-width: 65%;
+  display: flex;
+  height: 50%;
+  width: 25vw;
   align-items: center;
   justify-content: center;
 
-  /* background-color: #10a775; */
+  /* background-color: #a710a5; */
   z-index: -1;
 }
 
 .img1 {
   height: auto;
-  width: 300px;
+  width: 75%;
   aspect-ratio: 1;
   align-items: center;
   justify-content: center;
@@ -91,47 +113,8 @@ li a:hover {
   /* background-color: #f0a775; */
 }
 
-.intro-div {
-  display: flex;
-  position: absolute;
-  align-items: center;
-  height: 75vh;
-  width: 70%;
-  min-width: 70%;
-
-  /* background-color: crimson; */
-  top: 10%;
-  left: 30%;
-}
-
-.intro-spacer {
-  position: relative;
-  height: 90%;
-  width: 20%;
-  align-items: center;
-  justify-content: center;
-
-  /* background-color: #a71d10; */
-}
-
-.intro {
-  display: flex;
-  width: 80%;
-  align-items: center;
-  justify-content: center;
-  padding-left: 10px;
-
-  font-size: 8em;
-  color: #10a775;
-  font-weight: 600;
-  text-shadow: -1px 0 black, 0 0.25px black;
-}
-
-.contact-div {
-  position: absolute;
-  width: 25%;
-  left: 287.5px;
-  top: 340px;
+.social-div {
+  width: 25vw;
   align-items: center;
   justify-content: center;
 
@@ -140,24 +123,68 @@ li a:hover {
 
 .social_icon {
   display: inline-block;
-  /* padding: 1px; */
-  margin: 25px;
-  margin-top: 2.5%;
+  margin: 1.25vw;
   border-radius: 360%;
   background-color: #00000000;
   color: #000000;
   text-shadow: -1px 0 black, 0 0.25px black;
 }
 
-.email_link {
+.email_tag {
   position: relative;
-  top: 10px;
+  top: 2vh;
 
   font-size: 1rem;
   color: rgba(255, 255, 255, 0.55);
   line-height: 1.5;
-  /* letter-spacing: 0.2rem; */
   text-decoration: none;
+}
+
+.email_link {
+  position: relative;
+  top: 2vh;
+
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.55);
+  line-height: 1.5;
+  text-decoration: none;
+
+  -moz-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+.email_link:hover {
+  color: #10a775;
+  text-shadow: 0px 0px 30px #fdec6e;
+  -moz-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+.intro-div {
+  align-items: center;
+  height: 100vh;
+  width: 55vw;
+  min-width: 55vw;
+
+  /* background-color: crimson; */
+}
+
+.intro {
+  display: flex;
+  width: 55vw;
+  align-items: center;
+  justify-content: center;
+  right: 1vw;
+  padding-top: 5vh;
+
+  font-size: 8em;
+  color: #10a775;
+  font-weight: 600;
+  text-shadow: -1px 0 black, 0 0.25px black;
 }
 
 .am-div {
@@ -165,20 +192,21 @@ li a:hover {
   align-items: center;
   justify-content: center;
   height: 100vh;
-  width: 100%;
+  width: 55vw;
+  background-color: slateblue;
 }
 
 .am {
   position: relative;
-  width: 700px;
-  min-width: 375px;
-  left: 30px;
-  padding-right: 30px;
+  width: 45vw;
+  min-width: 45vw;
+
   font-size: 1rem;
   color: rgba(255, 255, 255, 0.55);
   line-height: 1.5;
   letter-spacing: 0.2rem;
   text-transform: uppercase;
+  /* background-color: slateblue; */
 }
 
 .fa {
@@ -189,11 +217,11 @@ li a:hover {
   transform: scale(1.5); /* this is grow amount */
 }
 
+/*⬇️ change these lines to style focus effect */
 .focus {
   position: relative;
-  min-width: 375px;
-  top: 200px;
-  left: 360px;
+  min-width: 55vw;
+  top: 30vh;
   font-size: 3rem;
   color: rgba(255, 255, 255, 0.55);
   letter-spacing: 0.2rem;
@@ -234,6 +262,7 @@ li a:hover {
   -webkit-animation: mask-inner-move 1s linear infinite alternate;
   animation: mask-inner-move 1s linear infinite alternate;
 }
+/*⬆️ change these lines to style focus effect */
 
 /* focus animation settings don't change*/
 @-webkit-keyframes mask-move {
@@ -277,10 +306,17 @@ li a:hover {
 
 #map {
   position: absolute;
-  /* float: "left"; */
-  display: inline-block;
-  height: 100%;
-  width: 50%;
-  background-color: yellowgreen;
-  right: 0.1%;
+  height: 90%;
+  min-height: 90%;
+  width: 50vw;
+  top: 5vh;
+  right: 5.1vw;
+  padding: 10%;
+
+  border-radius: 1%;
+  border-width: 1.5px;
+  border-style: solid;
+  border-color: #c7cfdfd7;
+
+  background-color: rgba(6, 7, 5, 0.503);
 }

@@ -49,7 +49,7 @@
     <header class="nav-bar">
       <ul class="nav-content">
         <li class="nav-item">
-          <a class="nav-link" href="index.html">Home</a>
+            <a class="nav-link" href="index.html">Home</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="about_me.html">About Me</a>
@@ -70,12 +70,9 @@
     </header>
     <!-- menu_bar -->
     <div class="middle_panel">
-      <!-- profile pic -->
       <div class="img-div">
         <image class="img1" src="./static/img/profile_pic.jpeg"></image>
       </div>
-      <!-- profile pic -->
-      <!-- socials -->
       <div class="social-div">
         <div class="social_icon">
           <a href="https://github.com/The-Pr0grammer">
@@ -99,11 +96,11 @@
           >
         </div>
       </div>
-      <!-- socials -->
     </div>
 
     <!-- animated intro  -->
-    <div class="intro-div">
+    <!-- <div class="intro-div">
+      <div class="intro-spacer"></div>
       <p class="intro"></p>
     </div>
 
@@ -116,12 +113,41 @@
           "I'm a Full Stack Web Developer",
           `Welcome to my portfolio!`,
         ],
-        typeSpeed: 70,
+        typeSpeed: 60,
         backSpeed: 50,
-        backDelay: 2500,
         loop: true,
       });
-    </script>
+    </script> -->
     <!-- animated intro  -->
+
+    <!-- about me -->
+    <!-- <div class="focus">
+      <div class="focus--mask">
+        <div class="focus--mask-inner">About Me</div>
+      </div>
+      <p class="am">
+        I’m the type of person that will burst out laughing in dead silence over
+        something that happened yesterday. My ethics are so clear and
+        transparent that you can’t even see them. Sometimes I wish my mouth had
+        a Pause button… I’m so cool I wasn’t actually born, I was defrosted. I’m
+        so cool that even ice cubes are jealous. I’m so hot that I contribute to
+        global warming. I am so clever that sometimes I don’t understand a
+        single word of what I am saying. I don’t believe in miracles. I rely on
+        them. I’m painting a blue square in my backyard so Google Earth thinks I
+        have a pool.
+      </p>
+    </div> -->
+    <!-- about me -->
+
+    <!-- <div id="googleMap" style="width: 100%; height: 400px"></div> -->
+
+    <div id="map">
+      <script
+        src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+        integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+        crossorigin=""
+      ></script>
+      <script src="./js/map.js"></script>
+    </div>
   </body>
 </html>
