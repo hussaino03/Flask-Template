@@ -274,3 +274,13 @@ li a:hover {
   box-sizing: border-box;
 }
 /* focus animation settings don't change*/
+
+#map {
+  position: absolute;
+  /* float: "left"; */
+  display: inline-block;
+  height: 100%;
+  width: 50%;
+  background-color: yellowgreen;
+  right: 0.1%;
+}
