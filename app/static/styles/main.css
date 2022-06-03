@@ -201,6 +201,13 @@ li a:hover {
   width: 45vw;
   min-width: 45vw;
 
+  top: 10vh;
+  border-bottom-width: 0.25vh;
+  border-bottom-color: rgba(255, 255, 255, 0.55);
+  border-bottom-style: solid;
+
+  padding-bottom: 0.5vh;
+
   font-size: 1rem;
   color: rgba(255, 255, 255, 0.55);
   line-height: 1.5;
