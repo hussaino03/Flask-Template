@@ -46,13 +46,11 @@
     <!-- transparent black div to overlay the background -->
 
     <!-- menu_bar -->
+
     <header class="nav-bar">
       <ul class="nav-content">
         <li class="nav-item">
-          <a
-            class="nav-link"
-            style="color: rgba(255, 255, 255, 0.55)"
-            href="/"
+          <a class="nav-link" style="color: rgba(255, 255, 255, 0.55)" href="/"
             >Home</a
           >
         </li>
@@ -63,10 +61,10 @@
           <a class="nav-link" href="/experience">Experience</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/hobbies">Hobbies</a>
+          <a class="nav-link" href="/education">Education</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/education">Education</a>
+          <a class="nav-link" href="/hobbies">Hobbies</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/travel">My Travels</a>
@@ -74,6 +72,28 @@
       </ul>
     </header>
     <!-- menu_bar -->
+
+    <!-- animated intro  -->
+    <div class="intro-div">
+      <p class="intro"></p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+    <script>
+      var typed = new Typed(".intro", {
+        strings: [
+          "Hello, I'm {insert name}",
+          "I'm a Full Stack Web Developer",
+          `Welcome to my portfolio!`,
+        ],
+        typeSpeed: 70,
+        backSpeed: 50,
+        backDelay: 2500,
+        loop: true,
+      });
+    </script>
+    <!-- animated intro  -->
     <div class="middle_panel">
       <!-- profile pic -->
       <div class="img-div">
@@ -106,27 +126,5 @@
       </div>
       <!-- socials -->
     </div>
-
-    <!-- animated intro  -->
-    <div class="intro-div">
-      <p class="intro"></p>
-    </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-
-    <script>
-      var typed = new Typed(".intro", {
-        strings: [
-          "Hello, I'm {insert name}",
-          "I'm a Full Stack Web Developer",
-          `Welcome to my portfolio!`,
-        ],
-        typeSpeed: 70,
-        backSpeed: 50,
-        backDelay: 2500,
-        loop: true,
-      });
-    </script>
-    <!-- animated intro  -->
   </body>
 </html>
