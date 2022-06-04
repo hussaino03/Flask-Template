@@ -24,7 +24,7 @@ body {
 
 .nav-bar {
   display: flex;
-  height: 100vh;
+  height: 100%;
   width: 20vw;
   max-width: 20vw;
   min-width: 20vw;
