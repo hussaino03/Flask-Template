@@ -4,4 +4,4 @@
 .env
 python3-virtualenv
 flask.sqlite
-*/.DS_Store
+.DS_Store
