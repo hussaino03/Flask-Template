@@ -732,3 +732,97 @@ li a:hover {
     transform: rotate(2deg);
   }
 }
+.wrap {
+  position: relative;
+  font-size: 18px;
+  color: white;
+  z-index: -1;
+  animation: fadein 2s;
+    -moz-animation: fadein 2s; /* Firefox */
+    -webkit-animation: fadein 2s; /* Safari and Chrome */
+    -o-animation: fadein 2s; /* Opera */
+}
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-moz-keyframes fadein { /* Firefox */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-o-keyframes fadein { /* Opera */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+h1 {
+  font-size: 2em;
+  text-align: center;
+  margin: 20px 0 40px;
+  padding: 0;
+}
+
+.container {
+  background: transparent;
+  right: 100%;
+  margin: 0 auto;
+  overflow: auto;
+  padding: 2%;
+}
+
+.right-content,
+.left-content {
+  float: left;
+  display: block;
+  width: 40%;
+  padding: 1% 2%;
+}
+
+.left-content {
+  border-right: 5px dotted #666;
+  text-align: right;
+}
+
+.left-content p {
+  margin: 150px 0 0;
+}
+
+.right-content p {
+  margin: 80px 0 150px;
+}
+
+.container p {
+  -webkit-transition: all 0.7s ease-in-out;
+  -moz-transition: all 0.7 ease-in-out;
+  -ms-transition: all 0.7s ease-in-out;
+  -o-transition: all 0.7s ease-in-out;
+  transition: all 0.7s ease-in-out;
+}
+
+.left-content .more-padding {
+  padding-right: 100px;
+}
+
+.right-content .more-padding {
+  padding-left: 100px;
+}
