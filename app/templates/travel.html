@@ -58,10 +58,10 @@
           <a class="nav-link" href="/experience">Experience</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/hobbies">Hobbies</a>
+          <a class="nav-link" href="/education">Education</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/education">Education</a>
+          <a class="nav-link" href="/hobbies">Hobbies</a>
         </li>
         <li class="nav-item">
           <a
@@ -74,6 +74,24 @@
       </ul>
     </header>
     <!-- menu_bar -->
+
+    <div class="travel-div">
+      <div class="travel_header">
+        <h1 class="th1">My Travels</h1>
+        <span class="headerLine"></span>
+        <p class="thp">Here are some of the places I have been🛩</p>
+      </div>
+
+      <div id="map">
+        <script
+          src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+          integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+          crossorigin=""
+        ></script>
+        <script src="../static/js/map.js"></script>
+      </div>
+    </div>
+
     <div class="middle_panel">
       <div class="img-div">
         <image class="img1" src="./static/img/profile_pic.jpeg"></image>
@@ -101,21 +119,6 @@
           >
         </div>
       </div>
-    </div>
-
-    <div class="travel_header">
-      <h1 class="th1">My Travels</h1>
-      <span class="headerLine"></span>
-      <p class="thp">Here are some of the places I have been🛩</p>
-    </div>
-
-    <div id="map">
-      <script
-        src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
-        integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
-        crossorigin=""
-      ></script>
-      <script src="../static/js/map.js"></script>
     </div>
   </body>
 </html>
