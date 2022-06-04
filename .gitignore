@@ -5,3 +5,4 @@
 python3-virtualenv
 flask.sqlite
 .DS_Store
+python3-virtualenv/pyvenv.cfg
