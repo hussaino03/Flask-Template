@@ -24,7 +24,7 @@ body {
 
 .nav-bar {
   display: flex;
-  height: 100vh;
+  height: 100%;
   width: 20vw;
   max-width: 20vw;
   min-width: 20vw;
@@ -313,11 +313,11 @@ li a:hover {
 
 #map {
   position: absolute;
-  height: 90%;
-  min-height: 90%;
+  height: 75%;
+  min-height: 75%;
   width: 50vw;
-  top: 5vh;
-  right: 5.1vw;
+  top: 20vh;
+  right: 2.75vw;
   padding: 10%;
 
   border-radius: 1%;
@@ -326,4 +326,46 @@ li a:hover {
   border-color: #c7cfdfd7;
 
   background-color: rgba(6, 7, 5, 0.503);
+}
+
+.travel_header {
+  position: relative;
+  top: 2vh;
+  width: 55vw;
+  min-width: 55vw;
+  text-align: center;
+
+  align-items: center;
+  justify-content: center;
+  /* background-color: #10a775; */
+}
+
+.th1 {
+  width: 55vw;
+  text-align: center;
+
+  font-size: 30px;
+  color: white;
+  margin-bottom: 0px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.thp {
+  width: 55vw;
+  text-align: center;
+
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1.5rem;
+  color: #10a775;
+  font-weight: 600;
+  text-shadow: -1px 0 black, 0 0.25px black;
+}
+
+.headerLine {
+  width: 7.5vw;
+  height: 2px;
+  display: block;
+  background: #10a775;
+  margin: 0 auto;
 }
