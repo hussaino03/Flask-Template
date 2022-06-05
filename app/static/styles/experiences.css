@@ -468,7 +468,7 @@ td {
   float: right;
 
   height: 12.5vh;
-  width: 93.5vw;
+  width: 168.5vh;
   z-index: -1;
   /* background-color: aquamarine; */
 }
@@ -603,7 +603,7 @@ td {
   top: 8vh;
   right: 0;
   float: right;
-  padding-left: 10vw;
+  padding-left: 0.5vw;
 
   height: 10.5vh;
   width: 80vw;
