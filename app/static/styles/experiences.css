@@ -468,9 +468,10 @@ td {
   float: right;
 
   height: 12.5vh;
-  width: 168.5vh;
+  /* width: 168.5vh; */
+  width: 80vw;
   z-index: -1;
-  /* background-color: aquamarine; */
+  background-color: aquamarine;
 }
 
 .book {
@@ -480,13 +481,17 @@ td {
   left: 0;
   right: 0;
   margin: auto;
-  /* height: 12.5rem; */
-  /* width: 18.5rem; */
+
   height: 3.5rem;
-  width: 6.5rem;
+  /* width: 16.5rem; */
+  
+  width: 12.5rem;
   perspective: 70rem;
   opacity: 0.2;
   z-index: 1;
+
+  background-color: rgb(255, 127, 221);
+
 }
 .cover {
   background-color: #36354e;
