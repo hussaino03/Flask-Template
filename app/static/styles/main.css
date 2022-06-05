@@ -332,8 +332,8 @@ li a:hover {
 .travel_header {
   position: relative;
   top: 2vh;
-  width: 55vw;
-  min-width: 55vw;
+  width: 80vw;
+  min-width: 80vw;
   text-align: center;
 
   align-items: center;
@@ -342,7 +342,7 @@ li a:hover {
 }
 
 .th1 {
-  width: 55vw;
+  min-width: 80vw;
   text-align: center;
 
   font-size: 2.1rem;
@@ -361,7 +361,7 @@ li a:hover {
 }
 
 .thp {
-  width: 55vw;
+  min-width: 80vw;
   text-align: center;
 
   font-family: "Courier New", Courier, monospace;
