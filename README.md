@@ -20,6 +20,7 @@ We got a more solid understanding of HTML, CSS, Python and integrating them toge
 We are scheduled to add our own individual information to the template as well as adding a database for the backend 
 
 
+Demo Video:
 
 https://user-images.githubusercontent.com/58962847/172506166-7e8b4428-d7fd-4c02-bbc1-3722894e554f.mp4
 
