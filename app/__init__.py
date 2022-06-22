@@ -6,8 +6,7 @@ from peewee import *
 load_dotenv()
 app = Flask(__name__)
 
-mydb =
-MYSQLDatabase(os.getenv("MYSQL_DATABASE"),
+mydb = MYSQLDatabase(os.getenv("MYSQL_DATABASE"),
               user=os.getenv("MYSQL_USER"),
               password=os.getenv("MYSQL_PASSWORD"),
               host=os.getenv("MYSQL_HOST"),
