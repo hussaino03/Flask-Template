@@ -56,14 +56,14 @@ def hobbies():
 def education():
     return render_template('education.html', title="MLH Fellow")
 
-@app.route('/api/timeline_post', methods = ['Post'])
+@app.route('/api/timeline_post', methods = ['POST'])
 def post_timeline_post():
     name = request.form['name']
     email = request.form['email']
     content = request.form['content']
     timeline_post = TimelinePost.create(name=name, email=email, content=content)
 
-    return model_to_dict(TimelinePost)
+    return model_to_dict(timeline_post)
 
 @app.route('/api/timeline_post', methods=['GET'])
 def get_timeline_post():
