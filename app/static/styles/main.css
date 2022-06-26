@@ -2,7 +2,7 @@ body {
   /* display: flex; */
   /* display: flex; */
   flex-direction: row;
-  height: 100%;
+  height: 100vh;
   width: 100%;
   margin: 0px;
 
@@ -10,15 +10,16 @@ body {
   background-color: #000000;
   background-size: cover;
   overflow-x: hidden;
-  overflow-y: hidden;
+  /* overflow-y: hidden; */
+  overflow-y: scroll;
   font-family: "Roboto", serif;
 }
 
 .overlay {
   position: absolute;
   width: 100%;
-  height: 100%;
-  margin: 0;
+  height: 101vh;
+  margin: 0px;
   padding: 0;
   z-index: -1;
   background-color: rgba(0, 0, 0, 0.886);
@@ -62,6 +63,7 @@ body {
   max-width: 20vw;
   min-width: 20vw;
   padding: 35px 20px;
+  height: 12.5%;
 
   color: #10a775;
   font-weight: 700 !important;
@@ -204,7 +206,7 @@ li a:hover {
   width: 45vw;
   min-width: 45vw;
 
-  top: 10vh;
+  top: 5vh;
   border-bottom-width: 0.25vh;
   border-bottom-color: rgba(255, 255, 255, 0.55);
   border-bottom-style: solid;
@@ -386,4 +388,87 @@ li a:hover {
   border-color: #c7cfdfd7;
 
   background-color: rgba(6, 7, 5, 0.503);
+}
+
+.tl-div {
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  overflow-y: scroll;
+  /* display: flex; */
+}
+
+.form-div {
+  width: 80%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  float: right;
+  flex-direction: column;
+  /* display: flex; */
+}
+
+#form {
+  background: #10a775;
+  padding: 3% 3%;
+  border-radius: 30px;
+  width: 500px;
+  margin: auto;
+}
+
+#form input[type="text"] {
+  background: #fff;
+  border-radius: 30px;
+  display: block;
+  width: 100%;
+  padding: 2%;
+  color: rgb(255, 128, 128);
+  border: none;
+  margin-bottom: 5%;
+  /* height: 10vh; */
+}
+
+#form textarea {
+  background: #fff;
+  border-radius: 30px;
+  display: block;
+  width: 100%;
+  padding: 2%;
+  color: rgb(255, 128, 128);
+  border: none;
+  margin-bottom: 5%;
+  height: 12vh;
+}
+
+#form input[type="submit"] {
+  background: none;
+  border: 3px solid #fff;
+  border-radius: 30px;
+  display: block;
+  width: 20%;
+  color: #fff;
+  padding: 1%;
+  margin: auto;
+}
+
+.postsh1 {
+  padding: 1%;
+  color: aquamarine;
+  margin: auto;
+  text-align: center;
+  /* background-color: yellow; */
+}
+
+#tl-posts {
+  width: 50vw;
+  max-width: 50vw;
+  text-align: center;
+  margin: auto;
+
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1.5rem;
+  color: #10a775;
+  font-weight: 600;
+  text-shadow: -1px 0 black, 0 0.25px black;
 }

@@ -1,36 +1,12 @@
-from email.policy import default
+
 import os
-from pyexpat import model
-from typing import Text
 from flask import Flask, render_template, request
 from dotenv import load_dotenv
 from peewee import *
-import datetime
-from playhouse.shortcuts import model_to_dict
+from playhouse.shortcuts import model_to_dict 
 
 load_dotenv()
 app = Flask(__name__)
-
-mydb = MySQLDatabase(os.getenv("MYSQL_DATABASE"),
-              user=os.getenv("MYSQL_USER"),
-              password=os.getenv("MYSQL_PASSWORD"),
-              host=os.getenv("MYSQL_HOST"),
-              port=3306
-)
-print(mydb)
-
-class TimelinePost(Model):
-    name = CharField()
-    email = CharField()
-    content = TextField()
-    created_at = DateTimeField(default=datetime.datetime.now)
-
-    class Meta:
-        database = mydb
-
-mydb.connect()
-mydb.create_tables([TimelinePost])
-
 
 @app.route('/')
 def index():
@@ -38,39 +14,57 @@ def index():
 
 @app.route('/aboutMe')
 def aboutMe():
-    return render_template('about_me.html', title="MLH Fellow")
+    return render_template('about_me.html', title="About Me")
 
 @app.route('/experience')
 def experience():
-    return render_template('experience.html', title="MLH Fellow")
+    return render_template('experience.html', title="Experience")
 
 @app.route('/travel')
 def travel():
-    return render_template('travel.html', title="MLH Fellow")
+    return render_template('travel.html', title="My Travels")
 
 @app.route('/hobbies')
 def hobbies():
-    return render_template('hobbies.html', title="MLH Fellow")
+    return render_template('hobbies.html', title="Hobbies")
 
 @app.route('/education')
 def education():
-    return render_template('education.html', title="MLH Fellow")
+    return render_template('education.html', title="Edcaction")
 
-@app.route('/api/timeline_post', methods = ['POST'])
-def post_timeline_post():
-    name = request.form['name']
-    email = request.form['email']
-    content = request.form['content']
-    timeline_post = TimelinePost.create(name=name, email=email, content=content)
+@app.route('/timeline')
+def timeline():
+    return render_template('timeline.html', title='Timeline')
 
-    return model_to_dict(timeline_post)
+mydb = MySQLDatabase(os.getenv("MYSQL_DATABASE"),user=os.getenv("MYSQL_USER"), password=os.getenv("MYSQL_PASSWORD"), host=os.getenv("MYSQL_HOST"), port=3306)
+print(mydb)
 
-@app.route('/api/timeline_post', methods=['GET'])
-def get_timeline_post():
-    return {
-        'timeline_posts': [
-            model_to_dict(p)
-            for p in
-TimelinePost.select().order_by(TimelinePost.created_at.desc())
-        ]
-    }
+class TimelinePost(Model):
+    date = CharField()
+    title = CharField()
+    events = TextField()
+
+    class Meta:
+        database = mydb
+
+mydb.connect()
+mydb.create_tables([TimelinePost])
+
+@app.route("/api/timeline_post", methods=["GET", "POST", "DELETE"])
+def timeline_post():
+    if request.method == "POST":
+        date = request.form["date"]
+        title = request.form["title"]
+        events = request.form["events"]
+
+        timeline_post = TimelinePost.create(date=date,
+                                            title=title,
+                                            events=events)
+
+        return model_to_dict(timeline_post)
+    elif request.method == "GET":
+        return {'posts': [model_to_dict(p) for p in TimelinePost.select()]}
+    elif request.method == "DELETE":
+        del_id = request.form["id"]
+        TimelinePost.delete_by_id(del_id)
+        return f'Removed ID: {del_id}'

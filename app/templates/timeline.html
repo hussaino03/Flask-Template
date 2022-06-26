@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <title>Portfolio Template</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta property="og:title" content="Personal Portfolio" />
+    <meta property="og:description" content="My Personal Portfolio" />
+    <meta property="og:url" content="{{ url }}" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link lang="sass" rel="stylesheet" href="./static/styles/main.css" />
+
+    <link rel="icon" href="./static/img/favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <!-- transparent black div to overlay the background -->
+    <div class="overlay"></div>
+    <!-- transparent black div to overlay the background -->
+
+    <div class="tl-div">
+      <!-- menu_bar -->
+      <header class="nav-bar">
+        <ul class="nav-content">
+          <li class="nav-item">
+            <a class="nav-link" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/aboutMe">About Me</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/experience">Experience</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/education">Education</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/hobbies">Hobbies</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/travel">My Travels</a>
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              style="color: rgba(255, 255, 255, 0.55)"
+              href="/timeline"
+              >Timeline</a
+            >
+          </li>
+        </ul>
+      </header>
+      <!-- menu_bar -->
+
+      <div class="form-div">
+        <form id="form">
+          <input type="text" name="date" placeholder="Today's Date" />
+          <input type="text" name="title" placeholder="Title" />
+          <textarea name="events" placeholder="What happened?"></textarea>
+          <input type="submit" name="submit" value="Submit" />
+        </form>
+        <h1 class="postsh1">My Timeline:</h1>
+        <ul id="tl-posts" style="overflow-y: scroll"></ul>
+      </div>
+    </div>
+  </body>
+
+  <script>
+    fetch("/api/timeline_post").then((resp) => {
+      resp.json().then((data) => {
+        let list = document.getElementById("tl-posts");
+        let posts = data.posts;
+        posts.forEach((p) => {
+          let li = document.createElement("li");
+          li.textContent = `Date: ${p.date}\nTitle: ${p.title}\nEvents:\n ${p.events}`;
+          list.appendChild(li);
+        });
+      });
+    });
+  </script>
+
+  <script>
+    let form = document.querySelector("form");
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const data = new FormData(e.target);
+      fetch("/api/timeline_post", {
+        method: "POST",
+        body: data,
+      }).then(() => {
+        let list = document.getElementById("tl-posts");
+        list.innerHTML = "";
+        fetch("/api/timeline_post").then((resp) => {
+          resp.json().then((data) => {
+            const posts = data.posts;
+            posts.forEach((p) => {
+              let li = document.createElement("li");
+              li.textContent = `Date: ${p.date}\nTitle: ${p.title}\nEvents:\n ${p.events}`;
+              list.appendChild(li);
+            });
+          });
+        });
+      });
+    });
+  </script>
+</html>
