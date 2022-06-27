@@ -1,1 +1,3 @@
 app/templates/* linguist-vendored
+app/static/styles/* linguist-vendored
+
