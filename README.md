@@ -1,5 +1,5 @@
 <div align="center">
-  <img alt="Logo" src="assets/favicon/apple-touch-icon.png" width="100" />
+  <img alt="Logo" src="app/static/img/logo.jpg" width="100" />
 </div>
 <h1 align="center">
   Flask Portfolio Template 
