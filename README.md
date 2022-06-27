@@ -10,7 +10,7 @@
 
 ## 🚀 Portfolio Template
 
-This portfolio template is built with Python, Flask, Jinja, JavaScript, HTML/CSS 
+This portfolio template is built with Python, Flask, Jinja, JavaScript, HTML/CSS, MySQL
 
 
 ## 💫 Deployment
@@ -24,6 +24,7 @@ This portfolio template is built with Python, Flask, Jinja, JavaScript, HTML/CSS
 - [Python](https://www.python.org/)
 - [Jinja](https://jinja.palletsprojects.com/en/3.1.x/)
 - [JavaScript](https://www.javascript.com/)
+- [MySQL](https://www.mysql.com/)
 - [HTML/CSS](https://www.w3.org/standards/webdesign/htmlcss)
 
 ## ⚙️ Installation
