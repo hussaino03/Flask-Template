@@ -221,6 +221,13 @@ li a:hover {
   /* background-color: slateblue; */
 }
 
+.hover-item {
+  transition: 0.3s;
+}
+.hover-item:hover {
+  transform: translate(0, -10px);
+}
+
 .fa {
   transition: 0.5s; /* this is grow duration */
 }
