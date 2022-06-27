@@ -13,11 +13,6 @@
 This portfolio template is built with Python, Flask, Jinja, JavaScript, HTML/CSS, MySQL
 
 
-## 💫 Deployment
-
-- Frontend only (can be easily hosted through Github Pages, Vercel)
-
-
 ## ⛏️ Built With
 
 - [Flask](https://flask.palletsprojects.com/en/2.1.x/)
@@ -43,7 +38,7 @@ Use the package manager [pip](https://pip.pypa.io/en/stable/) to install all dep
 pip install -r requirements.txt
 ```
 
-## Usage
+## 💫 Usage
 
 Create a .env file using the example.env template (make a copy using the variables inside of the template)
 
