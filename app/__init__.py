@@ -20,6 +20,10 @@ def aboutMe():
 def experience():
     return render_template('experience.html', title="Experience")
 
+@app.route('/skills')
+def skills():
+    return render_template('skills.html', title="Skills")
+
 @app.route('/travel')
 def travel():
     return render_template('travel.html', title="My Travels")
