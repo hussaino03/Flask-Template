@@ -413,7 +413,7 @@ li a:hover {
   align-items: center;
   float: right;
   flex-direction: column;
-  /* display: flex; */
+  display: flex;
 }
 
 #form {
