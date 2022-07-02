@@ -1,9 +1,11 @@
+#!/usr/bin/env python3
 
 import os
 from flask import Flask, render_template, request
 from dotenv import load_dotenv
 from peewee import *
 from playhouse.shortcuts import model_to_dict 
+
 
 load_dotenv()
 app = Flask(__name__)
@@ -40,7 +42,17 @@ def education():
 def timeline():
     return render_template('timeline.html', title='Timeline')
 
-mydb = MySQLDatabase(os.getenv("MYSQL_DATABASE"),user=os.getenv("MYSQL_USER"), password=os.getenv("MYSQL_PASSWORD"), host=os.getenv("MYSQL_HOST"), port=3306)
+if os.getenv("TESTING") == "true":
+    print("Running in test mode")
+    mydb = SqliteDatabase('file:memory?mode=memory&cache=shared',
+                          uri=True)
+else:
+    mydb = MySQLDatabase(os.getenv("MYSQL_DATABASE"),
+                         user=os.getenv("MYSQL_USER"), 
+                         password=os.getenv("MYSQL_PASSWORD"), 
+                         host=os.getenv("MYSQL_HOST"), 
+                         port=3306
+                        )
 print(mydb)
 
 class TimelinePost(Model):
@@ -57,18 +69,30 @@ mydb.create_tables([TimelinePost])
 @app.route("/api/timeline_post", methods=["GET", "POST", "DELETE"])
 def timeline_post():
     if request.method == "POST":
-        date = request.form["date"]
-        title = request.form["title"]
-        events = request.form["events"]
-
-        timeline_post = TimelinePost.create(date=date,
-                                            title=title,
-                                            events=events)
-
-        return model_to_dict(timeline_post)
+        date = request.form.get('date')
+        title = request.form.get('title')
+        events = request.form.get('events')
+        
+        if date is None or date =="":
+            return "Invalid date", 400
+        if ("/" not in date and "-" not in date) or date =="" :
+            return "Invalid date", 400
+        elif title is None or title == "":
+        #if title is None or title == "":
+            return "Invalid title", 400
+        elif events is None or events == "":
+            return "Invalid events", 400
+        else:
+            timeline_post = TimelinePost.create(date=date,
+                                                title=title,
+                                                events=events)
+            return model_to_dict(timeline_post)
+    
     elif request.method == "GET":
         return {'posts': [model_to_dict(p) for p in TimelinePost.select()]}
     elif request.method == "DELETE":
         del_id = request.form["id"]
         TimelinePost.delete_by_id(del_id)
         return f'Removed ID: {del_id}'
+
+
