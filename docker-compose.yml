@@ -24,6 +24,10 @@ services:
                         - mydatabase:/var/lib/mysql
 
 volumes:
+<<<<<<< HEAD
         mydatabase:
                 
 
+=======
+        mydatabase:
+>>>>>>> 018fd2e316f5f17c0a9e835df566fa616d763395
