@@ -16,6 +16,8 @@ This portfolio template is built with Python, Flask, Jinja, JavaScript, HTML/CSS
 ## ⛏️ Built With
 
 - [Flask](https://flask.palletsprojects.com/en/2.1.x/)
+- [Docker] (https://www.docker.com/)
+- [Nginx] (https://www.nginx.com/0
 - [Python](https://www.python.org/)
 - [Jinja](https://jinja.palletsprojects.com/en/3.1.x/)
 - [JavaScript](https://www.javascript.com/)
