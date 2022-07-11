@@ -18,7 +18,6 @@ services:
                         - .env
                 volumes:
                         - mydatabase:/var/lib/mysql
-<<<<<<< HEAD
         nginx:
                 container_name: nginx
                 image: jonasal/nginx-certbot
@@ -38,8 +37,6 @@ volumes:
         mydatabase:
         nginx_secrets:
                 
-=======
 
 volumes:
         mydatabase:
->>>>>>> 018fd2e316f5f17c0a9e835df566fa616d763395
