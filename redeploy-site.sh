@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd team-portfolio
+cd /root/team-portfolio
 git fetch && git reset origin/main --hard
 
 docker compose -f docker-compose.prod.yml down
