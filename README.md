@@ -5,7 +5,7 @@
   Flask Portfolio Template 
 </h1>
 <p align="center">
-   <a href="http://hussaino.duckdns.org:5000/" target="_blank">hussaino.duckdns.org</a>
+   <a href="http://hussaino.duckdns.org/" target="_blank">hussaino.duckdns.org</a>
 </p>
 
 ## 🚀 Portfolio Template
