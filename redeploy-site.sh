@@ -1,3 +1,5 @@
+#!/bin/bash
+
 cd team-portfolio
 git fetch && git reset origin/main --hard
 
