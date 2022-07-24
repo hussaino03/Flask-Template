@@ -32,7 +32,9 @@ jobs:
         run: ssh my-vm 'cd ${{ secrets.PROJECT_ROOT }} && pwd'
 
       - name: Deploy site
-        run: ssh my-vm '~/redeploy-site.sh'
+        run: |
+          ssh my-vm 'cd ${{ secrets.PROJECT_ROOT }}'
+          ssh my-vm '~/redeploy-site.sh'
 
       - name: Print Out Container Status
         run: |
