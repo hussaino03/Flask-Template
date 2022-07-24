@@ -2,7 +2,7 @@ name: Deploy
 
 on:
   push:
-    branches: 
+    branches:
       - main
   workflow_dispatch:
 
@@ -17,7 +17,7 @@ jobs:
           echo "$SSH_PRIVATE_KEY" > ~/.ssh/deploy-key.pem
           chmod 600 ~/.ssh/deploy-key.pem
           cat >> ~/.ssh/config <<END
-          Host my-vps
+          Host my-vm
             HostName $SSH_IP
             User $SSH_USER
             IdentityFile ~/.ssh/deploy-key.pem
@@ -27,6 +27,14 @@ jobs:
           SSH_USER: ${{ secrets.SSH_USER }}
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
           SSH_IP: ${{ secrets.SSH_IP }}
-          
+
       - name: Print project root directory
-        run: ssh my-vps 'cd ${{ secrets.PROJECT_ROOT }} && pwd'
+        run: ssh my-vm 'cd ${{ secrets.PROJECT_ROOT }} && pwd'
+
+      - name: Deploy site
+        run: ssh my-vm '~/redeploy-site.sh'
+
+      - name: Print Out Container Status
+        run: |
+          ssh my-vm 'cd ${{ secrets.PROJECT_ROOT }}'
+          docker ps
