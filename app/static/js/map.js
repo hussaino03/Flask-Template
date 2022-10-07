@@ -8,7 +8,7 @@ L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
     '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
 }).addTo(map);
 
-// “Open Street Maps” by https://www.openstreetmap.org/ is licensed under Open Data Commons Open Database License (ODbL) by the OpenStreetMap Foundation (OSMF).
+// “Open Street Maps” by https://www.openstreetmap.org/ is licensed under Open Data Commons Open Database License (ODbL) by the OpenStreetMap Foundation (OSMF)
 // https://www.openstreetmap.org/copyright
 
 const marker1 = L.marker([25.286106, 51.534817])
